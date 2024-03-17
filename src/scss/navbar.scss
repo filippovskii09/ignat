@@ -1,0 +1,27 @@
+.nav {
+	background: #343434;
+	padding: 16px 0px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__info {
+		display: flex;
+		gap: 23px;
+		@media (max-width: 375px){
+			gap: 10px;
+		}
+	}
+	&__text {
+		
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+	}
+	&__link {
+		text-decoration: none;
+		cursor: pointer;
+	}
+}

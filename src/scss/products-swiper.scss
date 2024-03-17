@@ -1,0 +1,154 @@
+.products {
+	padding-bottom: 81px;
+	&__container {}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 31px;
+	}
+	&__title {
+		font-size: 26px;
+		font-weight: 500;
+		line-height: 40px;
+		@media (max-width: 585px){
+			font-size: 22px;
+		}
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		@media (max-width: 585px){
+			gap: 15px;
+		}
+	}
+	&__pages {
+		@media (max-width: 585px){
+			font-size: 14px;
+		}
+		@media (max-width: 375px){
+			display: none;
+		}
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+	}
+	&__button {
+		border: none;
+		background: transparent;
+		cursor: pointer;
+	}
+}
+
+.products-item {
+	color: #000;
+	position: relative;
+	&__image {
+		width: 100%;
+		& img {
+			width: 100%;
+		}
+	}
+	&__content {
+		padding-top: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@media (max-width: 768px){
+			padding-top: 10px;
+		}
+		@media (max-width: 585px){
+			padding-top: 6px;
+		}
+	}
+	&__name {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 26px;
+		@media (max-width: 1024px){
+			font-size: 18px;
+			line-height: 22px;
+		}
+		@media (max-width: 768px){
+			font-size: 16px;
+		}
+		@media (max-width: 585px){
+			font-size: 14px;
+		}
+	}
+	&__category {
+		padding-top: 20px;
+		padding-bottom: 10px;
+		line-height: 0;
+		@media (max-width: 1024px){
+			padding-top: 15px;
+			padding-bottom: 8px;
+		}
+		@media (max-width: 768px){
+			font-size: 14px;
+		}
+		@media (max-width: 585px){
+			font-size: 12px;
+		}
+	}
+	&__info {
+		padding-bottom: 10px;
+		@media (max-width: 768px){
+			font-size: 14px;
+		}
+		@media (max-width: 585px){
+			font-size: 12px;
+		}
+	}
+	&__price {
+		font-size: 20px;
+		font-weight: 700;
+		color: rgb(74, 170, 78);
+		@media (max-width: 768px){
+			font-size: 18px;
+		}
+		@media (max-width: 585px){
+			font-size: 16px;
+		}
+	}
+	&__button {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		border: none;
+		&-liked {
+			& path {
+				fill: red;
+				stroke: red;
+			}
+		}
+		@media (max-width: 585px){
+			height: 20px;
+			width: 20px;
+		}
+	}
+}
+
+.products .swiper-slide {
+	width: 32% !important;
+	@media (max-width: 1024px){
+		width: 31.5% !important;
+	}
+	@media (max-width: 768px){
+		width: 31% !important;
+	}
+	@media (max-width: 500px){
+		width: 30% !important;
+	}
+	@media (max-width: 375px){
+		width: 29% !important;
+	}
+}

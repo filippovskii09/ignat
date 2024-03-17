@@ -1,0 +1,138 @@
+.header {
+	padding: 13px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 130px;
+		@media (max-width: 1124px){
+			gap: 80px;
+		}
+	}
+	&__logo {
+	}
+
+	&__menu {
+		@media (max-width: 1024px){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			left: 0;
+			top: 0;
+			background: #343434;
+			z-index: 10;
+			transform: translateX(-100%);
+			transition: all 0.3s ease 0s;
+			flex-direction: column;
+			row-gap: 60px;
+		}
+	}
+	&__actions {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		@media (max-width: 1124px){
+			gap: 12px;
+		}
+	}
+	&__icon {
+		transition: all 0.3s ease 0s;
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+	&__form {
+	}
+}
+
+.header__actions .header__form {
+	@media (max-width: 585px){
+		display: none;
+	}
+}
+.header__menu .header__form {
+	display: none;
+	@media (max-width: 585px){
+		display: block;
+	}
+}
+
+.form-header {
+	position: relative;
+	&__action {
+		padding: 0;
+		margin: 0;
+		border: none;
+		background-color: transparent;
+		width: unset;
+		height: unset;
+		cursor: pointer;
+		position: absolute;
+		left: 9px;
+		top: 50%;
+		transform: translateY(-40%);
+	}
+	&__input {
+		border-radius: 15px;
+		background: rgb(232, 232, 232);
+		border: none;
+		width: 282px;
+		height: 40px;
+		padding-left: 38px;
+		display: flex;
+		align-items: center;
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-results-button,
+		&::-webkit-search-results-decoration { 
+			display: none;
+		}
+	}
+}
+.header .menu {
+
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		@media (max-width: 1124px){
+			gap: 20px;
+		}
+		@media (max-width: 1024px){
+			flex-direction: column;
+			row-gap: 25px;
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		@media (max-width: 1024px){
+			color:#fff;
+			font-size: 22px;
+		}
+	}
+}
+
+.hamburger-react {
+	display: none;
+	@media (max-width: 1024px){
+		display: block;
+		z-index: 12;
+	}
+}
+.menu_open {
+	transform: translateX(0);
+}
